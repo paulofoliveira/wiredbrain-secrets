@@ -65,11 +65,11 @@ namespace WiredBrain.CustomerPortal.Web.Controllers
             return RedirectToAction("LoyaltyOverview", new { loyaltyNumber = model.LoyaltyNumber });
         }
 
-        public async Task<IActionResult> AddCredit(int loyaltyNumber)
+        public IActionResult AddCredit(int loyaltyNumber)
         {
             ViewBag.Title = "Redirect To Payment Provider...";
             ViewBag.PaymentProviderKey = "XY-InCode-1234";
-            
+
             return View();
         }
     }
